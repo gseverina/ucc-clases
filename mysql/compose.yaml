@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.4  # Mejor especificar una versión estable
+    container_name: mysql-dev
+    restart: always
+    ports:
+      - "3306:3306"  # Expone MySQL al host
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: example          # Crea base de datos al iniciar
+      MYSQL_USER: gseverina            # Usuario adicional
+      MYSQL_PASSWORD: gseverina        # Contraseña del usuario
+    volumes:
+      - db_data:/var/lib/mysql         # Persistencia de datos
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql  # Script de inicialización
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:                             # Volumen nombrado persistente
