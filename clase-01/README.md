@@ -1,4 +1,4 @@
-# Clase 01 - Base de Datos PEDIDOS
+# Clase 01 - REPASO
 
 **📅 Fecha:** 7 de Agosto de 2025
 
@@ -144,33 +144,6 @@ SELECT * FROM clientes LIMIT 5;
 SELECT * FROM v_clientes_entre_fechas;
 SELECT * FROM v_ventas_por_origen;
 ```
-
----
-
-## 📊 Datos de Prueba Incluidos
-
-### 👥 Clientes (5 registros)
-- García, María
-- López, Juan Carlos
-- Martínez, Ana Sofía
-- Rodríguez, Carlos Alberto
-- Fernández, Lucía
-
-### 🏢 Proveedores (3 registros)
-- TecnoPro S.A.
-- ImportTech Ltda.
-- NacionalElectronics
-
-### 👨‍💼 Vendedores (3 registros)
-- González, Roberto
-- Silva, Patricia
-- Herrera, Miguel
-
-### 📦 Productos (12 registros)
-- Laptops, mouses, teclados, monitores, etc.
-
-### 📋 Pedidos (10 registros)
-- Con diferentes cantidades de renglones (1-3)
 
 ---
 
